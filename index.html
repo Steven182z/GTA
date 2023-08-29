@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- Conexión Bootstrap CCS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!--- Documento CCS -->
+    <link rel="stylesheet" href="style.css">
+    <title>GTA S</title>
+</head>
+<body class="bg-boy-secondary">
+    <!------------------- DIVISION -------------------->
+    <!------- [BARRA DE NAVEGACION]-------->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark" id="barragta">
+    <div class="container">
+        <a class="navbar-brand" class="nav-link" id="OpcNavPrincipal" href="#">GTA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">                              <span class="navbar-toggler-icon"></span> 
+        <span class="navbar-toggler-icon"> </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" id="OpcNavFront" href="#">Creación de caso</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="OpNavBack" href="#">Back</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" href="#">Escalados</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mas</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">More options</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+    <!------------------- DIVISION -------------------->
+    <!------------------- PANEL LATERAL ESCALADOS -------------------->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptions">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Escalados</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+            <!------------------- Panel opciones -------------------->
+
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="dc-tab" data-bs-toggle="pill" data-bs-target="#dc-tab-pane" type="button" role="tab" aria-controls="dc-tab-pane" aria-selected="true">Datacenter</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="dg-tab" data-bs-toggle="pill" data-bs-target="#dg-tab-pane" type="button" role="tab" aria-controls="dg-tab-pane" aria-selected="false">Digitales</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="out-tab" data-bs-toggle="pill" data-bs-target="#out-tab-pane" type="button" role="tab" aria-controls="out-tab-pane" aria-selected="false">Outbounds</button>
+      </li>
+      <li class="nav-item" role="presentation">
+          <button class="nav-link" id="others-tab" data-bs-toggle="pill" data-bs-target="#others-tab-pane" type="button" role="tab" aria-controls="others-tab-pane" aria-selected="false">Otros</button>
+      </li>
+    </ul>
+                  <!------------------- DIVISION -------------------->
+                  <!------------------- Datacenter -------------------->
+    <div class="tab-pane fade show active" id="dc-tab-pane" role="tabpanel" aria-labelledby="dc-tab" tabindex="0">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Disponibles 24*7</button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="accordion-body">
+                <table class="table" id="tab-dispo">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Área</th>
+                      <th scope="col">Numero</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Rafael Llinas</th>
+                      <td>App y BD</td>
+                      <td id="copynumberappbd">093155327685</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Carol Romero</th>
+                      <td>Backup</td>
+                      <td id="copynumberstg">093158643805</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Sara Sandoval</th>
+                      <td>Ciber</td>
+                      <td id="copynumberciber">093156269498</td>
+                   </tr>
+                    <tr>
+                      <th scope="row">Omar Canarias</th>
+                      <td>Infraestructura</td>
+                      <td id="copynumberinfra">093162380498</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Ivanna Lizcano</th>
+                      <td>Linux/Unix</td>
+                      <td id="copynumberunix">093152645494</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Roberto Bautista</th>
+                      <td>Redes</td>
+                      <td id="copynumbersegyred">093159253083</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Sebastian Tovar</th>
+                      <td>VMware</td>
+                      <td id="copynumbervw">093152203672</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Ivan Torres</th>
+                      <td>Windows</td>
+                      <td id="copynumberwin">093155275203</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Aplicaciones y Bases de datos</button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table" id="tab-appybd">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Correo</th>
+                      <th scope="col">Numero</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Andres Luna</th>
+                      <td>@Correo</td>
+                      <td id="copynumberappbduno">093152903941</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Rafael Llinas</th>
+                      <td>@Correo</td>
+                      <td id="copynumberappbddos">093155327685</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Backup / Storage</button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table" id="tab-stg">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                      <th scope="col">Correo</th>
+                      <th scope="col">Numero</th>
+                      <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Carol Romero</th>
+                    <td>@Correo</td>
+                    <td id="copynumberstguno">093158643805</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fredy Salinas</th>
+                    <td>@Correo</td>
+                    <td id="copynumberstgdos">093155157366</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Infraestructura</button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table" id="tab-infra">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Numero</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Jorge Murcia </th>
+                    <td>@Correo</td>
+                    <td id="copynumberinfrauno">093172250316</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Linux / Unix</button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table" id="tab-unix">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Numero</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Ivanna Lizcano</th>
+                    <td>@Correo</td>
+                    <td id="copynumberunixuno">093152645494</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">Seguridad y Redes</button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table" id="tab-unix">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Correo</th>
+                      <th scope="col">Numero</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Adriana Perez</th>
+                      <td>@Correo</td>
+                      <td id="copynumbersegyreduno">093160443518</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Eliezer Serrano</th>
+                      <td>@Correo</td>
+                      <td id="copynumbersegyreddos">093172231093</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Fernando Alzate</th>
+                      <td>@Correo</td>
+                      <td id="copynumbersegyredtres">093155270158</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Irma Rojas</th>
+                      <td>@Correo</td>
+                      <td id="copynumbersegyredcuatro">093152646746</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Roberto Bautista</th>
+                      <td>@Correo</td>
+                      <td id="copynumbersegyredcinco">093159253083</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Wilmer Rodriguez</th>
+                      <td>@Correo</td>
+                      <td id="copynumbersegyredseis">093053006074</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">VMware</button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table" id="tab-stg">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Numero</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Yenny Vergara</th>
+                    <td>@Correo</td>
+                    <td id="copynumbervwuno">093156137715</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sebastian Tovar</th>
+                    <td>@Correo</td>
+                    <td id="copynumbervwdos">093152203672</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">Windows</button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table" id="tab-unix">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Numero</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Ivan Romero</th>
+                    <td>@Correo</td>
+                    <td id="copynumberwinuno">093155275203</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <div class="tab-pane show" id="dg-tab-pane" role="tabpanel" aria-labelledby="dg-tab" tabindex="0">
+      <h3>DIGITALES</h3>
+        <p>CUERPO DIGITALES</p>
+    </div>
+
+  </div>
+
+  <div id="sectionprincipal">
+    <h1>Seccion Principal</h1>
+    <p>ESTE ES LA PAGINA PRINCIPAL</p>
+  </div>
+  
+  <div id="sectionfront">
+    <div class="container-lg" id="containerFrontPadre">
+      <div id="containerFrontleft" class="row my-4 m-2">
+        <div class=""id="cardformulario">
+          <div class="card">
+            <p class="card-header text-center bg-dark text-white fw-bold">Datos del cliente</p>
+            <div class="card-body">
+              <div class="d-sm-flex validacion_1">
+                <div class="btn-group-md container " role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="reqType_Call" autocomplete="off" checked>
+                  <label class="btn btn-outline-dark" for="reqType_Call">Llamada</label>
+                  <input type="radio" class="btn-check" name="btnradio" id="reqType_Email" autocomplete="off">
+                  <label class="btn btn-outline-dark" for="reqType_Email">Correo</label>
+                </div>
+                 <div class="input-group mb-2">
+                    <label class="input-group-text fw-bold" for="tipo_Requerimiento">Tipo:</label>
+                    <select class="form-select" id="tipo_Requerimiento">
+                    </select>
+                </div>
+              </div>
+              <div class="d-sm-flex validacion_1">
+                <div class="input-group mb-2">
+                    <label class="input-group-text" for="SelectFamily">Familia</label>
+                    <select class="form-select" id="SelectFamily">
+                    </select>
+                </div>
+                <div class="input-group mb-2">
+                    <label class="input-group-text" for="SelectProduct">Producto</label>
+                    <select class="form-select" id="SelectProduct">
+                        <option value="1">...</option>
+                    </select>
+                </div>
+              </div>
+              <hr class="m-1 mb-3">
+              <!--todo ***** 2da VALIDACION ***** --->
+              <div class="d-block validacion_2" id="">
+                <div class="d-sm-flex">
+                  <div class="input-group mb-1">
+                    <label class="input-group-text" for="Nit">Nit</label>
+                    <input id="Nit" class="form-control" type="text" placeholder="Nit" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-1">
+                    <label class="input-group-text" for="enterprise">Empresa</label>
+                    <input id="enterprise" class="form-control" type="text" placeholder="Razón Social" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="d-sm-flex">
+                  <div class="input-group mb-1">
+                    <label class="input-group-text" for="customerName">Nombre</label>
+                    <input id="customerName" class="form-control" type="text" placeholder="Contacto autorizado" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-1">
+                    <label class="input-group-text" for="codeAtis">Atis</label>
+                    <input id="codeAtis" class="form-control" type="text" placeholder="Fecha del correo" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="d-sm-flex">
+                  <div class="input-group mb-1">
+                    <label class="input-group-text" for="customerEmail">Correo</label>
+                    <input id="customerEmail" class="form-control" type="text" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-1">
+                    <label class="input-group-text" for="customerPhone">Telefono</label>
+                    <input id="customerPhone" class="form-control" type="text" placeholder="Celular" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="d-sm-flex">
+                  <div class="input-group mb-1">
+                    <label class="input-group-text" for="TittleReq">Solicitud</label>
+                    <input id="TittleReq" class="form-control" type="text" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="d-sm-flex">
+                  <div class="input-group mb-1">
+                    <label class="input-group-text" for="customerINC">Numero de caso</label>
+                    <input id="customerINC" class="form-control" type="text" placeholder="Ingrese el INC " aria-label="Username" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-success" id="btnCorreo">Correo</button>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-success" id="btn-submitfront">Generar plantillas</button>
+              </div>
+            </div>
+
+
+        </div>
+        </div>
+      </div>
+      
+      <div id="containerFrontright" class="row m-2 pt-3">
+      <div class="mb-3" id="cardplantillas">
+        <div class="card">
+          <P class="card-header text-center bg-secondary bg-dark text-white fw-bold" >PLANTILLAS<button id="togglePlantillas" class="btn-close" aria-label="Close"></button>
+            <div class="btn-group" role="group" aria-label="Default button group">
+              
+              <button type="button" id="copyplantilla-1" class="btn btn-outline-primary">Copiar Primer Avance</button>
+              <button type="button" id="copyplantilla-2" class="btn btn-outline-primary">Copiar Facturación</button>
+              <button type="button" id="copyplantilla-3" class="btn btn-outline-primary">Copiar Guión del problema</button>
+            </div>
+            
+            
+          </P>
+          <div class="card-body" id="bodyplantillas">
+            <div id="plantillas-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="" id="cardcorreo">
+        <div class="card">
+          <P class="card-header text-center bg-secondary bg-dark text-white fw-bold">CORREO
+            <button type="button" id="copycorreo" class="btn btn-outline-info">Copiar</button>
+            <button id="toggleCorreo" class="btn-close" aria-label="Close"></button>
+          </P>
+          <div class="card-body" id="bodycorreo">
+            <div id="correo-container"></div>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+      </div>
+    </div>
+  </div>
+    
+  <div id="sectionback">
+    <h1>Back Datacenter</h1>
+    <p>INSERTE INFO DEL BACK DATACENTER</p>
+  </div>
+  <!--? Bootstrap JS--->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

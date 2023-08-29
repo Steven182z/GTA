@@ -1,0 +1,72 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+#tabla-dispo {
+
+    text-align: center;
+}
+
+#sectionprincipal {
+
+    display: block;
+}
+
+#sectionfront  {
+
+
+display: none;
+
+
+
+}
+
+#sectionback   {
+
+   
+    display: none;
+}
+
+#containerFrontPadre {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#containerFrontright {
+
+    display: flex;
+    flex-direction: column;
+}
+
+#plantilla-1 {
+
+    font-size: 13px;
+}
+
+#plantilla-2 {
+
+    font-size: 13px;
+}
+
+#plantilla-3 {
+
+    font-size: 13px;
+}
+
+#close-correo
+
+{
+
+    align-items: end;
+
+}
+
+#contenido-correo p {
+ 
+    margin: 0;
+    padding: 0;
+}
