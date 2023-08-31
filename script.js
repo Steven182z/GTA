@@ -225,7 +225,7 @@ btnCorreo.addEventListener("click", () => {
   const plantillaContainer = document.getElementById("correo-container");
   
   
-  
+
     // Generar plantilla de correo
     const plantillaCorreo = `
 
@@ -295,7 +295,7 @@ copyCorreoButton.addEventListener("click", function() {
     });
 });
 
-// NUEVA FUNCION EN PROCESO ---------------
+// FUNCION COPIAR PLANTILLAS 
 
 // Obtener referencias a los botones de copia de plantillas
 const copyPlantilla1Button = document.getElementById("copyplantilla-1");
@@ -352,3 +352,64 @@ function copiarPlantillaAlPortapapeles(plantillaId) {
     console.error(`La plantilla con ID ${plantillaId} no fue encontrada.`);
   }
 }
+
+//FUNCION COMUNICACION CLIENTE FRONT
+
+
+const btnComunicacion = document.getElementById("btn-comunicacionFront");
+
+btnComunicacion.addEventListener("click", () => {
+
+  bodyComunicacion.style.display = "block";
+
+  // Obtener datos del formulario
+  const numeroCaso = document.getElementById("customerINC").value; 
+  const fallaReportada = document.getElementById("TittleReq").value;
+
+  // Vaciar div contenedor
+  document.getElementById("comunicacion-container").innerHTML = "";
+
+  // Generar plantilla
+  const plantillaComunicacion = `
+    <div>
+      Se realiza la apertura de ticket ${numeroCaso} para atender su solicitud de: ${fallaReportada}
+    </div>
+  `;
+
+  // Agregar al div
+  document.getElementById("comunicacion-container").innerHTML = plantillaComunicacion;
+
+});
+
+//FUNCION CERRAR COMUNICACION CLIENTE FRONT
+
+// Obtener referencia al botón de cierre 
+const toggleComunicacion = document.getElementById("cerrarcomunicacion");
+
+// Obtener referencia al body que contiene la plantilla
+const bodyComunicacion = document.getElementById("comunicacion-container");
+
+// Agregar listener al botón de cierre
+toggleComunicacion.addEventListener("click", () => {
+
+  console.log()
+
+  // Ocultar body al hacer click
+  bodyComunicacion.style.display = "none";
+
+});
+//FUNCION COPIAR COMUNICACION CLIENTE FRONT
+
+// Obtener referencia al botón copycomunicacioncliente
+const copyComunicacionButton = document.getElementById("copycomunicacioncliente");
+
+// Agregar event listener al botón
+copyComunicacionButton.addEventListener("click", () => {
+
+  // Obtener contenido generado en communicacion-container
+  const comunicacionContenido = document.getElementById("comunicacion-container").innerText;
+
+  // Copiar al portapapeles
+  navigator.clipboard.writeText(comunicacionContenido)
+
+});
