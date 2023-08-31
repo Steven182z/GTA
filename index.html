@@ -54,7 +54,7 @@
 
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="dc-tab" data-bs-toggle="pill" data-bs-target="#dc-tab-pane" type="button" role="tab" aria-controls="dc-tab-pane" aria-selected="true">Datacenter</button>
+        <button class="nav-link" id="dc-tab" data-bs-toggle="pill" data-bs-target="#dc-tab-pane" type="button" role="tab" aria-controls="dc-tab-pane" aria-selected="true">Datacenter</button>
       </li>
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="dg-tab" data-bs-toggle="pill" data-bs-target="#dg-tab-pane" type="button" role="tab" aria-controls="dg-tab-pane" aria-selected="false">Digitales</button>
@@ -68,7 +68,8 @@
     </ul>
                   <!------------------- DIVISION -------------------->
                   <!------------------- Datacenter -------------------->
-    <div class="tab-pane fade show active" id="dc-tab-pane" role="tabpanel" aria-labelledby="dc-tab" tabindex="0">
+    <div class="tab-content">    
+     <div class="tab-pane fade show active" id="dc-tab-pane" role="tabpanel" aria-labelledby="dc-tab" tabindex="0">
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -357,11 +358,30 @@
         </div>
       </div>
     
+     </div>
     </div>
-    <div class="tab-pane show" id="dg-tab-pane" role="tabpanel" aria-labelledby="dg-tab" tabindex="0">
-      <h3>DIGITALES</h3>
-        <p>CUERPO DIGITALES</p>
-    </div>
+
+  <div class="tab-content">
+    <div class="tab-pane fade" id="dg-tab-pane" role="tabpanel" aria-labelledby="dg-tab" tabindex="0">
+
+      <p>aaaa</p>
+      </div>
+  </div>
+
+  <div class="tab-content">
+    <div class="tab-pane fade" id="out-tab-pane" role="tabpanel" aria-labelledby="out-tab" tabindex="0">
+
+      <p>Outbounds</p>
+      </div>
+  </div>
+
+  <div class="tab-content">
+    <div class="tab-pane fade" id="others-tab-pane" role="tabpanel" aria-labelledby="others-tab" tabindex="0">
+
+      <p>OTROS</p>
+      </div>
+  </div>
+    
 
   </div>
 
@@ -451,6 +471,7 @@
                 </div>
                 <button type="button" class="btn btn-success" id="btn-submitfront">Generar plantillas</button>
                 <button type="button" class="btn btn-success" id="btn-comunicacionFront">Generar comunicación cliente</button>
+                <button type="button" class="btn btn-warning" id="reinicio-front">Reiniciar</button>
               </div>
             </div>
 

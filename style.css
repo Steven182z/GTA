@@ -2,7 +2,15 @@
 
     margin: 0;
     padding: 0;
+    
 }
+
+body {
+    background-image: url('https://www.solofondos.com/wp-content/uploads/2015/11/Fondos-web.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 
 #tabla-dispo {
 
@@ -66,7 +74,7 @@ display: none;
 }
 
 #contenido-correo p {
- 
-    margin: 0;
-    padding: 0;
+    margin-bottom: -5px
+    
 }
+

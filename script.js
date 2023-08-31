@@ -236,15 +236,11 @@ btnCorreo.addEventListener("click", () => {
     <p>Cordial saludo, para atender su caso se genera número de reporte ${numeroCaso} con la siguiente información:</p>
   
     <div id="contenido-correo">
-  
       <p>Tipo: ${tiporeqValue}</p>
       <p>Nombre usuario: ${nombre}</p>
       <p>Cliente: ${empresa}</p>
       <p>Descripción de la solicitud: ${resumen}</p>
-  
-    </div>
-  
-  `;
+    </div>`;
 
 
  
@@ -413,3 +409,36 @@ copyComunicacionButton.addEventListener("click", () => {
   navigator.clipboard.writeText(comunicacionContenido)
 
 });
+
+// FUNCION REINCIAR TABLA DE DATOS
+
+// Agregar un event listener al botón con ID "reinicio-front"
+const btnReinicioFront = document.getElementById("reinicio-front");
+
+btnReinicioFront.addEventListener("click", () => {
+  // Llamar a la función para reiniciar los campos del formulario
+  reiniciarCampos();
+});
+
+// Función para reiniciar los campos del formulario
+function reiniciarCampos() {
+  // Obtener referencias a los elementos del formulario que deseas reiniciar
+  const inputElements = [
+    "Nit",
+    "enterprise",
+    "customerName",
+    "customerEmail",
+    "customerPhone",
+    "TittleReq",
+    "codeAtis",
+    "customerINC"
+  ];
+
+  // Iterar sobre los elementos y establecer su valor en vacío
+  inputElements.forEach(elementId => {
+    const inputElement = document.getElementById(elementId);
+    if (inputElement) {
+      inputElement.value = "";
+    }
+  });
+}
